@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(void) {
+	int N, M;
+	scanf("%d %d", &N, &M);
+	for (int i = 0; i < M/2; i++)
+	{
+		for (int a = 0; a < N+1; a++)
+		{
+			printf("%d ", a);
+		}
+		printf("\n");
+		for (int a = N; a > -1; a--)
+		{
+			printf("%d ", a);
+		}
+		printf("\n");
+	}
+	if (M%2==1)
+	{
+		for (int a = 0; a < N+1; a++)
+		{
+			printf("%d ", a);
+		}
+	}
+	return 0;
+}
