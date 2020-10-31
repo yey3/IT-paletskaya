@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main(void) {
+	double a, b, c;
+	scanf("%lf %lf %lf", &a, &b, &c);
+	double t;
+	if (c < b)
+	{
+		t = b;
+		b = c;
+		c = t;
+	}
+	if (c < a)
+	{
+		t = a;
+		a = c;
+		c = t;
+	}
+	if(c >= a+b)
+	{
+		printf("Такого треугольника не существует!");
+	}
+	else
+	{
+		printf("Данный треугольник ");
+		if (a == b && b == c) printf("правильный.");
+		else
+		{
+			if (a == c || a == b || b == c) printf("равнобедренный и ");
+			double x = a*a + b*b;
+			if (c*c == x) printf("прямоугольный.");
+			else if (c*c > x) printf("тупоугольный.");
+			else printf("остроугольный.");
+		}
+	}
+	return 0;
+}
