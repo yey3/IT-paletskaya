@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(void) {
+	int a = 1;
+	for (int i = 1; a < 101; i++)
+	{
+		printf("%d ", a);
+		a+=i;
+	}
+	return 0;
+}
