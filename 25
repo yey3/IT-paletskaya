@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void) {
+	int a = 1;
+	printf("%d ", a);
+	for (int i = 1; a < 101; i++)
+	{
+		a++;
+		printf("%d ", a);
+		a*=2;
+		if(a<101) printf("%d ", a);
+	}
+	return 0;
+}
