@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+	double a, b, c;
+	scanf("%lfx^2%lfx%lf", &a, &b, &c);
+	double D = b*b - 4*a*c;
+	if (D==0)
+	{
+		double x = (0-b)/(2*a);
+		printf("У уравнения есть 1 корень: %lf", x);
+	}
+	else if (D>0)
+	{
+		double x1 = (sqrt(D)-b)/(2*a);
+		double x2 = (0-sqrt(D)-b)/(2*a);
+		printf("У уравнения есть 2 корня: %lf, %lf", x1, x2);
+	}
+	else printf("У уравнения нет корней");
+	return 0;
+}
