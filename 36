@@ -1,0 +1,15 @@
+#include <stdio.h>
+char kon(char a, char b)
+{
+	return a&b;
+}
+char dis(char a, char b)
+{
+	return a|b;
+}
+int main(void) {
+	char a = 3;
+	char b = 8;
+	printf("%d\n%d", kon(a,b), dis(a,b));
+	return 0;
+}
