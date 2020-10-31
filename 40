@@ -1,0 +1,31 @@
+#include <stdio.h>
+double step(double chis, long st)
+{
+	if (st == 0) return 1;
+	if (st<0) return step(1/chis, -st);
+	return chis * step(chis, st-1);
+}
+long fact(int num)
+{
+	if(num == 0) return 1;
+	long rez = 1;
+	for (int i = 1; i<=num; i++)
+	{
+		rez*=i;
+	}
+	return rez;
+}
+
+double ex(double x)
+{
+	double rez = 0;
+	for(int n = 0; n < 21; n++)
+	{
+		rez+= step(x, n)/fact(n);
+	}
+	return rez;
+}
+int main(void) {
+	printf("%lf, %lf", ex(4));
+	return 0;
+}
