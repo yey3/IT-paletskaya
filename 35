@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <math.h>
+double sum(double a, double b)
+{
+	return a+b;
+}
+double raz(double a, double b)
+{
+	return a-b;
+}
+double proiz(double a, double b)
+{
+	return a*b;
+}
+double del(double a, double b)
+{
+	return a/b;
+}
+int cel(double a, double b)
+{
+	return a/b;
+}
+double ost(double a, double b)
+{
+	return a - floor(a/b)*b;
+}
+int main(void) {
+	double a, b;
+	scanf("%lf %lf", &a, &b);
+	printf("%lf; %lf; %lf; %lf; %d; %lf", sum(a,b), raz(a,b), proiz(a,b), del(a,b), cel(a,b), ost(a,b));
+	return 0;
+}
