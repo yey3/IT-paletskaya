@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(void) {
+	int N;
+	scanf("%d", &N);
+	double mas1[N];
+	for (int i = 0; i < N; i++)
+	{
+		scanf("%lf", &mas1[i]);
+	}
+	
+	int M;
+	scanf("%d", &M);
+	double mas2[M];
+	for (int i = 0; i < M; i++)
+	{
+		scanf("%lf", &mas2[i]);
+	}
+	
+	double rez[N+M];
+	for (int i = 0; i < N; i++)	rez[i] = mas1[i];
+	for (int i = 0; i < M; i++)	rez[i + N] = mas2[i];
+	
+	for (int i = 0; i < N+M; i++) printf("%lf ", rez[i]);
+}
