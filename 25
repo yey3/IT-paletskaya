@@ -8,7 +8,7 @@ int main(void) {
 		a++;
 		printf("%d ", a);
 		a*=2;
-		if(a<101) printf("%d ", a);
+		printf("%d ", a);
 	}
 	return 0;
 }
