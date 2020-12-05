@@ -5,7 +5,7 @@ int main(void) {
 	int rez = 0;
 	scanf("%d %d", &x_p, &y_p);
 	scanf("%d %d", &x_l, &y_l);
-	if (abs(y_p - y_l)==0 || abs(x_p - x_l)==0) printf("Осторожно, ладья может срубить пешку!");
+	if (y_p == y_l || x_p == x_l) printf("Осторожно, ладья может срубить пешку!");
 	else printf("Сейчас ладья не может срубить пешку, но будьте начеку!");
 	return 0;
 }
