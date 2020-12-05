@@ -5,14 +5,10 @@ int main(void) {
 	int rez = 0;
 	scanf("%d %d", &x_p, &y_p);
 	scanf("%d %d", &x_k, &y_k);
-	if (x_p == x_k - 1 && y_p == y_k - 3) rez = 1;
-	else if (x_p == x_k - 1 && y_p == y_k + 3) rez = 1;
-	else if (x_p == x_k + 1 && y_p == y_k + 3) rez = 1;
-	else if (x_p == x_k + 1 && y_p == y_k - 3) rez = 1;
-	else if (x_p == x_k + 3 && y_p == y_k + 1) rez = 1;
-	else if (x_p == x_k + 3 && y_p == y_k - 1) rez = 1;
-	else if (x_p == x_k - 3 && y_p == y_k + 1) rez = 1;
-	else if (x_p == x_k - 3 && y_p == y_k - 1) rez = 1;
+	int y = abs(y_p - y_k);
+	int x = abs(x_p - x_k);
+	if (x == 1 && y == 2) rez = 1;
+	else if (x == 2 && y == 1) rez = 1;
 	if (rez == 1) printf("Осторожно, конь может срубить пешку!");
 	else printf("Конь не может срубить пешку сейчас, но будьте начеку!");
 	return 0;
