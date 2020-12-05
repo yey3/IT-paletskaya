@@ -3,7 +3,7 @@
 int main(void) {
 	int a = 1;
 	printf("%d ", a);
-	for (int i = 1; a < 101; i++)
+	while (a < 101)
 	{
 		a++;
 		printf("%d ", a);
