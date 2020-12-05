@@ -5,9 +5,7 @@ int main(void) {
 	int rez = 0;
 	scanf("%d %d", &x_p, &y_p);
 	scanf("%d %d", &x_s, &y_s);
-	int p = abs(x_p - y_p);
-	int s = abs(x_s - y_s);
-	if (p==s) printf("Осторожно, слон может срубить пешку!");
+	if (abs(x_p - y_p)==abs(x_s - y_s)) printf("Осторожно, слон может срубить пешку!");
 	else printf("Сейчас слон не может срубить пешку, но будьте начеку!");
 	return 0;
 }
