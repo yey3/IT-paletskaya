@@ -5,17 +5,8 @@ int main(void) {
 	int rez = 0;
 	scanf("%d %d", &x_p, &y_p);
 	scanf("%d %d", &x_f, &y_f);
-	for(int i = 1; i<8; i++)
-	{
-		if(x_p == x_f + i && y_p == y_f + i) rez = 1;
-		else if (x_p == x_f + i && y_p == y_f - i) rez = 1;
-		else if (x_p == x_f - i && y_p == y_f - i) rez = 1;
-		else if (x_p == x_f - i && y_p == y_f + i) rez = 1;
-		else if (x_p == x_f + i && y_p == y_f) rez = 1;
-		else if (x_p == x_f && y_p == y_f + i) rez = 1;
-		else if (x_p == x_f && y_p == y_f - i) rez = 1;
-		else if (x_p == x_f - i && y_p == y_f) rez = 1;
-	}
+	if (x_p == x_f || y_p == y_f) rez = 1;
+	else if (abs(x_p-x_s) == abs(y_p-y_s)) rez = 1;
 	if (rez==1) printf("Осторожно, ферзь может срубить пешку!");
 	else printf("Сейчас ферзь не может срубить пешку, но будьте начеку!");
 	return 0;
