@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+ 
+int main(void) {
+	double rez = 0;
+	for (int n = 1; n < 100001; n++)
+	{
+		rez += pow(-1, n)/n;
+	}
+	printf("%lf  ", rez);
+	rez = 0;
+	for (int n = 10000; n > 0; n--)
+	{
+		rez += pow(-1, n)/n;
+	}
+	printf("%lf  ", rez);
+	rez = 0;
+	for (int n = 1; n < 10001; n++)
+	{
+		if (n%2==0) rez+=1/n;
+		else rez+=(-1)/n;
+	}
+	printf("%lf  ", rez);
+	rez = 0;
+	for (int n = 10000; n > 0; n--)
+	{
+		if (n%2==0) rez+=1/n;
+		else rez+=(-1)/n;
+	}
+	printf("%lf  ", rez);
+	return 0;
+}
+ 
